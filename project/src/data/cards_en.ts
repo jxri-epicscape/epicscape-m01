@@ -1,0 +1,256 @@
+import { Card } from '../types';
+
+export const cardsLevel1: Card[] = [
+  {
+    trackID: 'M01',
+    id: 'instruction',
+    title: 'Welcome',
+    logo: 'https://ik.imagekit.io/epicscape/ES+Krasis/Maria_01_Colour_Block_(RGB).png?updatedAt=1755245409301',
+    type: 'instruction',
+   instructionPages: [
+  {
+    title: 'Epic Scape Maria 01',
+    content:
+      'Your escape room is the Maria 01 Campus. \n\nSearch for clues and uncover secrets. Once you’ve gathered them all, assemble the final puzzle, piece by piece.\n\nGood luck. Time to make an Epic Scape.',
+    image: ''
+  },
+  {
+    title: 'How to play',
+    content:
+      'Epic Scape is a series of puzzles. Your mission: solve them.\n\nTo do that, combine information from multiple sources: your surroundings and the internet. If you need support, you can message Epic Scape.',
+    image: ''
+  },
+  {
+    title: 'Lost or stuck?',
+    content:
+      'Don’t worry. This is an escape-room-style game. Feeling stuck is part of the experience. Anything you see might matter. Experiment, observe, and don’t expect everything to be straightforward.\n\nHints are here to help. Use them when things get tricky. This game tests how well you connect the dots.',
+    image: ''
+  },
+    {
+        title: 'Quest for the Unicorn Elixir',
+        content: 
+          'In the heart of Helsinki, lies a legendary startup secret. The mythical Unicorn Elixir. Said to grant unparalleled success to any venture. This secret elixir is hidden all around the grounds, protected by puzzles that will test your curiosity and cleverness. Only the brave will find it.\n\nIf you are quick enough, you can claim a prize at the reception! Only the first three will succeed.',
+        image: 'https://ik.imagekit.io/epicscape/ES+Krasis/1bottle1(1).jpg?updatedAt=1756804033865'
+      },
+    ],
+    isLocked: false,
+    successText: '',
+    showsPinForCard: '',
+    endCompletionMessage: 'Thanks for playing Epic Scape.',
+    endFeedbackMessage: 'Rewards are waiting at the reception for the first three to finish.',
+    endFeedbackEmail: ''
+  },
+    {
+    id: 'info_level2',
+    title: 'Level 2 Unlocked!',
+    type: 'info',
+    dynamicInfoContent: [
+      {
+        text: 'Welcome to Maria 01 x Epic Scape! Begin by opening the Welcome card.',
+        requiredCompletedCards: []
+      },
+      {
+        text: 'Great job! You solved your first puzzle. Keep going!',
+        requiredCompletedCards: ['m01_p_1']
+      },
+         {
+        text: 'Great job! You solved your first puzzle. Keep going!',
+        requiredCompletedCards: ['m01_p_2']
+      },
+         {
+        text: 'Great job! You solved your first puzzle. Keep going!',
+        requiredCompletedCards: ['m01_p_3']
+      },
+         {
+        text: 'Great job! You solved your first puzzle. Keep going!',
+        requiredCompletedCards: ['m01_p_4']
+      },
+      {
+        text: 'Excellent progress! You\'re getting the hang of this.',
+        requiredCompletedCards: ['m01_p_1', 'm01_p_2']
+      },
+      {
+        text: 'Well done player! Keep playing the game and reveal the big secret!',
+        requiredCompletedCards: ['m01_p_1', 'm01_p_2', 'm01_p_3']
+      },
+      {
+        text: 'Amazing! You\'re almost at the end. One final puzzle awaits!',
+        requiredCompletedCards: ['m01_p_1', 'm01_p_2', 'm01_p_3', 'm01_p_4']
+      },
+      {
+        text: 'Epic Victory! Rewards are waiting at the reception for the first three to finish.',
+        requiredCompletedCards: ['m01_p_1', 'm01_p_2', 'm01_p_3', 'm01_p_4', 'final_m01']
+      }
+    ],
+    isLocked: false,
+  },
+{
+  id: 'm01_p_1',
+  title: 'Vision Spark',
+  displayIcon: 'zap',
+  type: 'puzzle',
+  subtype: 'rosegrid',
+  instructionPages: [
+    {
+      title: 'Vision Spark',
+      content: 'Look to the skies and trace the glowing mark. Its shape holds the key to unlocking the initial clue.'
+    },
+     {
+      title: 'V',
+      content: 'Stand in the courtyard and look for the giant letter V. Does it spark something?'
+    },
+  ],
+  question: 'Draw the same cryptic shape here and add up the result.',
+  codeAnswer: '',
+  alternateAnswers: [''],
+  haamuvastaus: 'Digits only: sum of numbers',
+  successText: 'Success! The Elixir brews a step closer to perfection.',
+  hintText: 'Hint: It\'s the number after 2.',
+  bigHintText: 'Big hint: The correct answer is 3.',
+  wrongAnswerText: 'Hmm, not quite. Want a small hint?',
+  wrongAnswerText2: 'Still off? Let me give you a big hint.',
+  isLocked: false,
+  pinCode: '',
+  pinCodeViesti: 'Unicorn Elixir formula : +2 to the first number.'
+},
+  {
+  id: 'm01_p_2',
+  title: 'Code of Numbers',
+  displayIcon: 'map',
+  type: 'puzzle',
+  subtype: 'lever',
+  instructionPages: [
+
+    {
+      title: 'Searching',
+      content: 'In this puzzle you must find the correct information and then use the levers to choose the right combination.'
+    }
+  ],
+  question: 'Maria 01 by Numbers. Search online and find the correct information.',
+  codeAnswer: '',
+  alternateAnswers: [''],
+  haamuvastaus: '',
+  hintText: '',
+  bigHintText: '',
+  wrongAnswerText: '',
+  wrongAnswerText2: '',
+  isLocked: false,
+  pinCode: '',
+  successText: 'Correct! Another piece of the Elixir recipe falls into place.',
+  pinCodeViesti: 'Unicorn Elixir formula : Keep the second number the same.'
+},
+
+  
+{
+  id: 'm01_p_3',
+  title: 'Banner of Fellowship',
+  displayIcon: 'shield',
+  type: 'puzzle',
+  subtype: 'rearrange',
+  instructionPages: [
+        {
+      title: 'Banner of Fellowship',
+      content: 'Align the digital strips as the wisdom on the board guides you. Each color and word is a step closer to the core of the elixir’s code.'
+    },
+   {
+  title: 'Arrangement Puzzle',
+  content: 'Go to the courtyard and find the large banner in the center. Study it closely and arrange the strips in the correct order.'
+}
+
+  ],
+  
+  question: 'Arrange the strips.',
+  haamuvastaus: '',
+  codeAnswer: '',
+  alternateAnswers: [''],
+  successText: 'Nice work! Another drop added to the Unicorn Elixir.',
+  hintText: 'It\'s not green or red.',
+  bigHintText: '',
+  wrongAnswerText: 'Not quite. Want a hint?',
+  wrongAnswerText2: '',
+  pinCode: '',
+  pinCodeViesti: 'Unicorn Elixir formula : Multiply the third number by 2.',
+  strips: [
+         {
+      id: 4,
+      numbers: ['7', { value: ' - Building 04', color: 'teal' }]
+    },
+        {
+      id: 3,
+      numbers: ['3', { value: ' - Building 06', color: 'teal' }]
+    },
+       {
+      id: 2, 
+      numbers: ['3', { value: ' - think different.', color: 'orange' }]
+    },
+     {
+      id: 5,
+      numbers: ['0', { value: ' - Building 03', color: 'teal' }]
+    },
+       {
+      id: 1,
+      numbers: ['1', { value: '- Great minds', color: 'orange' }]
+    },
+ 
+     
+  ],
+  triggersEndGrid: false,
+  isFinalPuzzle: false,
+},
+  {
+  id: 'm01_p_4',
+  title: 'Alchemist’s Flame',
+  displayIcon: 'flame',
+  type: 'puzzle',
+  subtype: 'text',
+  instructionPages: [
+ {
+  title: 'Alchemist’s Flame',
+  content: 'The Unicorn Elixir demands perfect heat and light. In the Alchemist\'s Blue Room lounge, shine your light on the small device near the fireplace to uncover the secret code.',
+ }
+  ],
+  question: 'Cast your light upon the device to reveal the code.',
+  haamuvastaus: 'Type your answer here',
+  codeAnswer: '4389',
+  alternateAnswers: ['XXXX'],
+  successText: 'Correct! The formula glows a little brighter.',
+  hintText: "Did you find the fireplace in the blue room lounge?",
+  bigHintText: "Shine your phone's torch on the black box above the fireplace and check the small hole on its side.",
+  wrongAnswerText: "Not quite. Want a hint to warm you up?",
+  wrongAnswerText2: "Still stuck? Try the big hint.",
+  pinCode: '',
+  pinCodeViesti: 'Unicorn Elixir formula : Set the fourth number to the original second number.'
+},
+ 
+
+  {
+    id: 'final_m01',
+    title: 'The Unicorn Elixir',
+    displayIcon: 'crown',
+    type: 'final',
+    subtype: 'jigsaw',
+    instructionPages: [
+      {
+        title: 'The Secret Recipe',
+        content: 'The four essences are gathered in the bottle. Only by merging them can the Unicorn Elixir be restored. Will you solve the final sequence?'
+      }
+    ],
+    imageSrc: 'https://ik.imagekit.io/epicscape/ES+Krasis/Unicorn%20Elixir%20in%20a%20Bottle.jpg?updatedAt=1756214166374',
+    question: '',
+    codeAnswer: '2929',
+    successText: 'EPIC WIN!',
+    hintText: '',
+    bigHintText: '',
+    wrongAnswerText: '',
+    wrongAnswerText2: '',
+    alternateWrongAnswerText: 'Nice try, clever detective! 🕵️ But the Unicorn Elixir requires a different formula. The real magic lies in following the clues you\'ve gathered!',
+    pinCode: '',
+    pinCodeViesti: 'Closing credits await. The Unicorn Elixir now shimmers in full.',
+    haamuvastaus: 'Enter the code',
+    triggersEndGrid: true,
+    isFinalPuzzle: true,
+    isLocked: false,
+  }
+];
+
+export const cardsLevel2: Card[] = [];
